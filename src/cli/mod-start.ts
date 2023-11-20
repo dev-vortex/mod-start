@@ -43,8 +43,8 @@ export async function modStart(
     }: ModStartOptions,
     tasks: Tasks,
 ): Promise<void> {
-    console.log('tasks', tasks)
-    console.log()
+    // console.log('tasks', tasks)
+    // console.log()
     const { commitHash, gitHistoryDir } = await tasks.cloneRepo(
         repoInfo,
         workingDirectory,

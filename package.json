@@ -1,6 +1,6 @@
 {
     "name": "@dev-vortex/mod-start",
-    "version": "1.0.0-development",
+    "version": "1.0.0",
     "types": "./src/types/index.d.ts",
     "description": "TypeScript Boilerplate NPM module creatiion",
     "type": "module",

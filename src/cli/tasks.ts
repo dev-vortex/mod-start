@@ -44,6 +44,7 @@ export const cloneRepo =
                       dir,
                   ]
         try {
+            console.log('git args', args)
             await spawner('git', args, {
                 cwd: workingDirectory,
                 stdio: suppressOutput ? 'pipe' : 'inherit',
@@ -183,8 +184,9 @@ export const getRepoInfo = (
               repo: process.env.MOD_START_REPO_URL,
           }
         : {
-              branch: `v${starterVersion}`,
-              repo: 'https://gitlab.com/dev-vortex/mod-start.git',
+              // branch: `v${starterVersion}`,
+              branch: `main`,
+              repo: 'https://github.com/dev-vortex/mod-start.git',
           }
 }
 

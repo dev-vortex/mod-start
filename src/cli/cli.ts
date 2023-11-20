@@ -2,7 +2,7 @@ import chalk from 'chalk'
 
 import { checkArgs } from './args'
 import { inquire } from './inquire'
-// import { modStart } from './mod-start'
+import { modStart } from './mod-start'
 import { addInferredOptions, LiveTasks } from './tasks'
 import { getIntro, hasCLIOptions, ModStartUserOptions } from './utils'
 ;(async () => {
@@ -11,15 +11,13 @@ import { getIntro, hasCLIOptions, ModStartUserOptions } from './utils'
         ? argInfo
         : {
               ...(await (async () => {
-                  console.log(getIntro(process.stdout.columns))
+                  //   console.log(getIntro(process.stdout.columns))
                   return inquire()
               })()),
               ...argInfo,
           }
     const options = await addInferredOptions(userOptions)
-    console.log('options', options)
-    console.log('LiveTasks', LiveTasks)
-    // return modStart(options, LiveTasks)
+    return modStart(options, LiveTasks)
 })().catch((err: Error) => {
     console.error(`
   ${chalk.red(err.message)}

@@ -99,6 +99,7 @@ export async function checkArgs(): Promise<ModStartArgsOptions> {
     //   `)
     // }
 
+    // console.log('cli', cli.pkg)
     const version = cli.pkg.version as string
 
     const input = cli.input[0]
